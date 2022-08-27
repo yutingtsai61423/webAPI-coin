@@ -1,0 +1,20 @@
+server:
+  port: 8081 # 伺服器的port號
+  servlet:
+    context-path: /coin
+
+spring:
+  h2:
+    console:
+      enabled: true
+  datasource:
+    url: jdbc:h2:mem:currency # h2 database 連接位址
+    driver-class-name: org.h2.Driver # 配置driver
+    username: root # database 用戶名
+    password: password # database 密碼
+
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    generate-ddl: false
+    hibernate:
+      ddl-auto: update
